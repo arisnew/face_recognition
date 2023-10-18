@@ -1,0 +1,5 @@
+captured_images/*
+dataset/*
+*.pyc
+.vscode/*
+trained_model.xml

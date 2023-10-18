@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face Recognition Model Training</title>
+</head>
+<body>
+    <h1>Face Recognition Model Training</h1>
+    <form action="/train" method="post">
+        <input type="submit" value="Start Training">
+    </form>
+    <div id="training-status"></div>
+    <script>
+        function checkTrainingStatus() {
+            fetch('/train-status')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('training-status').innerHTML = data.status;
+                });
+        }
+        setInterval(checkTrainingStatus, 1000);
+    </script>
+</body>
+</html>

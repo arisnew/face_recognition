@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face Recognition</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Face Recognition</h1>
+    <video id="video" autoplay></video>
+    <canvas id="canvas"></canvas>
+    <br>
+    <input type="text" name="identityField" id="identityField" value="person1">
+    <button id="startButton">Start Recognition</button>
+    <button id="startCapture">Start Capture</button>
+    <button id="trainButton">Training</button>
+    <p id="result">Recognition Result: </p>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
